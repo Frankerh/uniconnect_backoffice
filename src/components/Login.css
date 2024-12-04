@@ -1,0 +1,122 @@
+/* Definición del color principal de UniConnect */
+:root {
+  --primary-color: #25b4d2; /* Color principal de UniConnect */
+  --text-color: #333; /* Color gris oscuro para textos */
+  --background-color: hsl(0, 0%, 96%); /* Color de fondo */
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color); /* Usando el color de fondo */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caja de login */
+.login-box {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 800px;
+  max-width: 100%;
+}
+
+/* Imagen de login */
+.login-image {
+  background-color: var(--primary-color); /* Usando el color principal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.login-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Formulario de login */
+.login-form {
+  padding: 40px;
+  width: 60%;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Usando el color principal */
+}
+
+.login-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-color); /* Usando color gris oscuro */
+}
+
+/* Estilos de los formularios */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color); /* Usando color gris oscuro */
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: var(--primary-color); /* Usando el color principal */
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color); /* Manteniendo el color en hover */
+}
+
+/* Enlaces */
+.login-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-link {
+  color: var(--primary-color); /* Usando el color principal */
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Pie de página */
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--primary-color); /* Usando el color principal */
+}

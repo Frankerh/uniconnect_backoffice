@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Login from './components/Login';
+import Register from './components/Register';
+import UserManagement from './components/UserManagement';
+import Analytics from './components/Analytics';
+import CompleteUser from './components/CompleteUser';
+import Grupocheck from './components/Grupocheck';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div style={styles.container}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/users" element={<UserManagement />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/complete" element={<CompleteUser />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/grupo" element={<Grupocheck />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
+const styles = {
+  container: {
+    padding: '2rem',
+  }
+};
 
 export default App;
